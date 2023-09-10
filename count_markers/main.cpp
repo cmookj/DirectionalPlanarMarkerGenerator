@@ -64,9 +64,9 @@ int main(int argc, const char * argv[]) {
 
     auto dict_3x3 = create_dictionary(3*3);
     dict_3x3.print();
-    dict_3x3.save(30, 15, 8, "dict_3x3.pgm");
+    dict_3x3.save(50, 15, 8, "/tmp/dict_3x3.pgm");
 
-    // dict_3x3.at(0).save(100, "test.pgm");
+    dict_3x3.at(0).save(100, "/tmp/marker_3x3.pgm");
     
     return 0;
 }
