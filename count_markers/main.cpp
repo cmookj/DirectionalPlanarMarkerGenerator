@@ -61,6 +61,7 @@ int main(int argc, const char * argv[]) {
 
     auto dict_2x2 = create_dictionary(2*2);
     dict_2x2.print();
+    dict_2x2.save(100, 2, 2, "/tmp/dict_2x2.pgm");
 
     auto dict_3x3 = create_dictionary(3*3);
     dict_3x3.print();
