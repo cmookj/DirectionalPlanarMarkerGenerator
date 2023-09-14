@@ -8,14 +8,10 @@
 #ifndef marker_hpp
 #define marker_hpp
 
+#include "color.hpp"
+
 #include <vector>
 #include <iostream>
-
-enum class color_t {
-    black, white
-};
-
-void invert(color_t&);
 
 using elem_t = std::vector<color_t>;
 
@@ -53,32 +49,5 @@ private:
     size_t _dim;
     elem_t _data;  // _dim by _dim sized matrix pattern
 };
-
-class dict_t {
-public:
-    dict_t () = default;
-    virtual ~dict_t() = default;
-    
-    dict_t (const dict_t&) = default;
-    dict_t (dict_t&&) = default;
-    
-    dict_t& operator= (const dict_t&) = default;
-    dict_t& operator= (dict_t&&) = default;
-        
-    void append(const marker_t&);
-    size_t count() const;
-    
-    const marker_t& at(const unsigned) const;
-    
-    void print(std::ostream& strm = std::cout) const;
-    
-    void save (const size_t, const size_t, const size_t, const std::string&, const size_t begin = 0) const;
-    
-private:
-    std::vector<marker_t> _markers;
-};
-
-elem_t create_all_patterns(const unsigned);
-dict_t create_dictionary(const unsigned);
 
 #endif /* marker_hpp */

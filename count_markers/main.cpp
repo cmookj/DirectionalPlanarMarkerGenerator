@@ -6,6 +6,7 @@
 //
 
 #include "marker.hpp"
+#include "dictionary.hpp"
 
 #include <iostream>
 
